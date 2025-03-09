@@ -1,0 +1,22 @@
+<h1 style="text-align: center; padding: 2%;">List Residences</h1>
+<div class="container">
+  <div><input type="search" name="" id="" [(ngModel)]="searchItem" ></div>
+<div class="row">
+<div class="col-md-4" *ngFor="let R of listResidences">
+  <div *ngIf="R.name.toLowerCase().includes(searchItem.toLowerCase()) || !searchItem">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="R.image" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{R.name | uppercase}}</h5>
+        <h5 *ngIf="showA" class="card-title">{{R.address}}</h5>
+      <a class="btn btn-primary" (click)="show(R)">Show location</a>
+      <a class="btn btn-primary" [routerLink]="['/residenceD',R.id]">Show details</a>
+      <a class="btn btn-primary" (click)="delete(R.id)">Delete</a>
+      <a class="btn btn-primary" [routerLink]="['/update',R.id]" [queryParams]="{'title': R.name}">Edit</a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div><a routerLink="/add" >Add Residence</a></div>
+</div>

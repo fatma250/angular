@@ -1,0 +1,9 @@
+/* Basic styles for the affichage component */
+h3 {
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+}

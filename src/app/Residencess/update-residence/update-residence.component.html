@@ -1,0 +1,31 @@
+
+<div class="container">
+    <h2 style="aling:center">Update Residence</h2>
+    <form [formGroup]="updateForm" (ngSubmit)="updateR()">
+        <div class="form-group">
+          <label >Name</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label >address </label>
+            <input type="text" class="form-control" formControlName="address">
+        </div>
+       
+        <div class="form-group">
+            <label >image </label>
+            <input type="text" class="form-control" formControlName="image">
+        </div>
+        <div class="form-group">
+            <label >Status </label>
+            <select formControlName="status" class="form-control">
+              <option> Choose a status</option>
+              <option value="Vendu">Vendu</option>
+              <option value="En construction">En construction</option>
+              <option value="Disponible">Disponible</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    
+    </div>

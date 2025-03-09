@@ -1,0 +1,13 @@
+
+{{id}}
+
+<div *ngIf="R">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="R.image" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{R.name | uppercase}}</h5>
+        <h5 class="card-title">{{R.address}}</h5>
+     <button (click)="showNext()">⏩ Next</button>
+    </div>
+</div>
+</div>

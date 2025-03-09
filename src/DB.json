@@ -1,0 +1,46 @@
+{
+  "Residences": [
+    {
+      "id": "1",
+      "name": "El fel",
+      "address": "Borj Cedria",
+      "image": "../../assets/images/R1.jpg",
+      "status": "Disponible"
+    },
+    {
+      "id": "2",
+      "name": "El yasmine",
+      "address": "Tunis",
+      "image": "../../assets/images/R2.jpg",
+      "status": "Disponible"
+    },
+    {
+      "id": "3",
+      "name": "El Arij",
+      "address": "Rades",
+      "image": "../../assets/images/R3.jpg",
+      "status": "Vendu"
+    },
+    {
+      "id": "4",
+      "name": "El Anber",
+      "address": "Inconnu",
+      "image": "../../assets/images/R3.jpg",
+      "status": "En Construction"
+    }
+  ],
+  "annonces": [
+    {
+      "id": 1,
+      "title": "Appartement Moderne",
+      "price": 250000,
+      "residenceId": 1
+    }
+  ],
+  "residences": [
+    {
+      "id": 1,
+      "name": "Résidence Belle Vue"
+    }
+  ]
+}

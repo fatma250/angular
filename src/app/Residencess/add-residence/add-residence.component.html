@@ -1,0 +1,33 @@
+
+<div class="container">
+<form [formGroup]="addForm" (ngSubmit)="SaveResidence(addForm)">
+    <div class="form-group">
+      <label >Name</label>
+      <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div><span *ngIf="name?.invalid && addForm.get('name')?.touched" class="text-danger">Name is required!</span></div>
+    <div class="form-group">
+        <label >address </label>
+        <input type="text" class="form-control" formControlName="address">
+    </div>
+    <div><span *ngIf="address?.errors?.['required'] && addForm.get('address')?.touched" class="text-danger">Address is required!</span></div>
+    <div><span *ngIf="address?.errors?.['maxlength'] && addForm.get('address')?.touched" class="text-danger">max 20 chars!</span></div>
+
+    <div class="form-group">
+        <label >image </label>
+        <input type="file" class="form-control" formControlName="image">
+    </div>
+    <div class="form-group">
+        <label >Status </label>
+        <select formControlName="status">
+          <option> Choose a status</option>
+          <option value="Vendu">Vendu</option>
+          <option value="En construction">En construction</option>
+          <option value="Disponible">Disponible</option>
+        </select>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
